@@ -1,0 +1,42 @@
+---
+title: "HB1907_FishDietData_Cleaning"
+author: "S. G. Glancy"
+date: "1/21/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Set up project library
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(janitor)
+library(lubridate)
+
+```
+Order of cleaning
+1. rename column headers
+2. remove extra data
+3. begin checking for spelling errors (should be minimal with data validation used) (can be done in excel if too time consuming in R)
+4. seperate into 2 dataframes- counts only and measurements only
+5. TBD
+
+
+
+```{r}
+
+library(readr)
+HB1907_manuscript_data_raw <- read_csv("HB1907_manuscript_data_raw.csv")
+View(HB1907_manuscript_data_raw)
+
+```
+
